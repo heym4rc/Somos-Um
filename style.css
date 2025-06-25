@@ -29,9 +29,10 @@ body, .group-design-root {
 
 body, .main-container {
   font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
-  background: #fff;
+  background: #181818;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -39,21 +40,29 @@ body, .main-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
+}
+
+.content-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
 
 .header-container {
   width: 100%;
-  padding: 0 16px;
-  padding-top: 12px;
+  justify-content: center;
 }
+
 .header-inner {
-  border-radius: 16px;
   overflow: hidden;
   min-height: 20rem;
   background: #fff;
 }
+
 .main-header-img {
   width: 100%;
   min-height: 20rem;
@@ -65,18 +74,21 @@ body, .main-container {
 
 .main-gradient-section {
   padding: 16px;
+  margin: 0 0 16px 0;
 }
+
 .main-gradient {
   border-radius: 16px;
   min-height: 132px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdFQ3cleTInPn11vfE708SHXbBgDzxZXFBjcPw1fvR8uSYSBjxWJQHEnsBDTJkXgXSxlxvYi4zJcpOZ2rK2Yr9DgDykNYDeULuJgoQkbDwtfjwUY8x-I3QMVi4gF6uqkFgHwq6UEQG_Vq4UobNhpWYnscQeG-Na4Qi5WUGK7DedUNxtfmj6mv9wuhSsRGc6IFjKOu1_TcLFxYukfFiAM-SBD7hg3qns7BEJ9UsUEEUNDWDLxCNRFfwur7co4_nP4d8BJJmREpE2A");
+  background-image: linear-gradient(0deg, rgba(24, 24, 24, 0.8) 0%, rgba(24, 24, 24, 0.0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdFQ3cleTInPn11vfE708SHXbBgDzxZXFBjcPw1fvR8uSYSBjxWJQHEnsBDTJkXgXSxlxvYi4zJcpOZ2rK2Yr9DgDykNYDeULuJgoQkbDwtfjwUY8x-I3QMVi4gF6uqkFgHwq6UEQG_Vq4UobNhpWYnscQeG-Na4Qi5WUGK7DedUNxtfmj6mv9wuhSsRGc6IFjKOu1_TcLFxYukfFiAM-SBD7hg3qns7BEJ9UsUEEUNDWDLxCNRFfwur7co4_nP4d8BJJmREpE2A");
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
+
 .main-gradient-content {
   width: 100%;
   display: flex;
@@ -85,12 +97,14 @@ body, .main-container {
   gap: 16px;
   padding: 16px;
 }
+
 .main-gradient-text {
   max-width: 440px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
+
 .together-title {
   color: #fff;
   font-size: 2rem;
@@ -99,6 +113,7 @@ body, .main-container {
   letter-spacing: 0.01em;
   margin: 0;
 }
+
 .together-time {
   color: #fff;
   font-size: 1rem;
@@ -109,15 +124,18 @@ body, .main-container {
 .playlist-section {
   padding: 16px;
 }
+
 .playlist-card {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
   background: #f4f0f1;
   border-radius: 16px;
-  padding: 12px 16px;
+  padding: 16px;
   overflow: hidden;
 }
+
 .playlist-img {
   width: 56px;
   height: 56px;
@@ -128,9 +146,11 @@ body, .main-container {
   flex-shrink: 0;
   background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtl5s6BZ3DcIbHWS7bGSHFV51nrIn2wFhv_xG0t1xN0XDKnYHID-MROorgJFxWbHfCAcdFTt2DgV0ViB7cI9lNwYHBljwj931vBlwJSU6QxPgkqMPkMfu69uu558kUhDhSkCvtWGDvHY6AYLJweNRCV8lNxw-EGp_lpT5YVuQ7MVmElwgm00qmk8SsxS3Z6n9XDEpMWjxy1FvU4wopukvT-596O7_NmgbFnsZQLcZAyDkgD5jZTXD_kZME5bCfJQvyPtEzVRsOiA");
 }
+
 .playlist-info {
   flex: 1;
 }
+
 .playlist-title {
   color: #181112;
   font-size: 1rem;
@@ -140,6 +160,7 @@ body, .main-container {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .playlist-names {
   color: #886369;
   font-size: 0.9rem;
@@ -148,6 +169,7 @@ body, .main-container {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .playlist-play-btn {
   width: 40px;
   height: 40px;
@@ -160,12 +182,13 @@ body, .main-container {
   justify-content: center;
   cursor: pointer;
 }
+
 .playlist-play-icon {
   color: inherit;
 }
 
 .memories-title {
-  color: #181112;
+  color: #ffff;
   font-size: 22px;
   font-weight: bold;
   line-height: 1.2;
@@ -173,16 +196,18 @@ body, .main-container {
   padding: 20px 16px 12px 16px;
   margin: 0;
 }
+
 .memories-scroll {
   overflow-x: auto;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
 }
+
 .memories-list {
   display: flex;
-  gap: 32px;
   padding: 16px;
 }
+
 .memory-card {
   display: flex;
   flex-direction: column;
@@ -193,6 +218,7 @@ body, .main-container {
   border-radius: 12px;
   text-align: center;
 }
+
 .memory-img {
   width: 100px;
   height: 100px;
@@ -202,15 +228,19 @@ body, .main-container {
   background-size: cover;
   margin: 0 auto;
 }
+
 .memory-date {
   background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATxrd6g7wwERrQuvgUu6rkaS8J5VMfUcxMm_lUWKiTV7sMnk6T-Mu6Q-s1pbWvF5FEiypz5xHIs04yDklT7khusUhQDtM1UnWB-Mv_Y26wMe5DxswnRdG07qJsDwj8mSL7pBx5oFjmIHV4_HK6uHdjeinmGqAKMuJpWGHW2gnJB_Wg4yVLWR4tibtut1Rma7fqywx85GOUvEZUV2aKbJs-22gkj6bVGDRSnBGpsrcWTMWazDiRyeo0qeo3cK7zftVZLN-g9nqrQw");
 }
+
 .memory-trip {
   background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt4pK-JEWyYLedUaMZ9TT4UrC8Y1rVYdLO4y7H4kW2-7U8BnqvOK9-5V3PJe4kRe8zE63-fYEn3rR0jQ1xMIdAOlN8FRIDZLXQH15xSleMnIEdyG4ljSRuaVBnyndB4hSRHAV_x8LKFJ3-mAhC5hFZqhZ1rCIdAY57Yb6zrsaAmICTJbRWW6kFIirwymqZkYwm4A2fJc652gjCUvCVqdo58z2d9nb1fLq1A1J-GUN8zUxdtlsLoze11EZy68rE6Tp6gzcDXL6v2g");
 }
+
 .memory-home {
   background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSTphIkZ9E0OKFVm48oJYr1I9ug1u6eKuRXMaOClobiLRwvqu3JSnAPxUdv9aV7t5aJ1V94n5c4blg_5xb3NTqbJ8CK3vE4G7DEY7tRPg62l5T8Vs_fLiuPsEYUbOBQejwgy3yw6ygVwgXdcEy90-_66XLfxS1fW1wCKdROSEmVjzNfOE20SPWFwYEDfVrDICcNi7MVkF7ry8epm6MbJiAi5OPbswrlQlw9hTFdjp70vUzb0KQln6BzH73VxVcQVwgZBlK8R4Deg");
 }
+
 .memory-label {
   color: #181112;
   font-size: 1rem;
@@ -222,101 +252,3 @@ body, .main-container {
   height: 20px;
   background: #fff;
 }
-
-@media (max-width: 600px) {
-  .main-container {
-    padding: 0;
-    width: 100vw;
-    min-height: 100vh;
-    border-radius: 0;
-  }
-  .header-container {
-    padding: 0 4vw;
-    padding-top: 4vw;
-  }
-  .header-inner {
-    border-radius: 18px;
-    min-height: 38vw;
-  }
-  .main-header-img {
-    min-height: 38vw;
-    border-radius: 18px;
-  }
-  .main-gradient-section {
-    padding: 4vw;
-  }
-  .main-gradient {
-    border-radius: 18px;
-    min-height: 28vw;
-  }
-  .main-gradient-content {
-    padding: 4vw;
-    gap: 2vw;
-  }
-  .main-gradient-text {
-    max-width: 100vw;
-    gap: 2vw;
-  }
-  .together-title {
-    font-size: 1.2rem;
-  }
-  .together-time {
-    font-size: 0.9rem;
-  }
-  .playlist-section {
-    padding: 4vw 0 0 0;
-  }
-  .playlist-card {
-    border-radius: 14px;
-    padding: 3vw 4vw;
-    gap: 3vw;
-  }
-  .playlist-img {
-    width: 14vw;
-    height: 14vw;
-    border-radius: 4vw;
-  }
-  .playlist-title {
-    font-size: 1rem;
-  }
-  .playlist-names {
-    font-size: 0.85rem;
-  }
-  .playlist-play-btn {
-    width: 10vw;
-    height: 10vw;
-    min-width: 36px;
-    min-height: 36px;
-    max-width: 48px;
-    max-height: 48px;
-  }
-  .memories-title {
-    font-size: 1.1rem;
-    padding: 5vw 4vw 3vw 4vw;
-  }
-  .memories-scroll {
-    padding-bottom: 2vw;
-    margin-bottom: 2vw;
-  }
-  .memories-list {
-    gap: 4vw;
-    padding: 4vw;
-  }
-  .memory-card {
-    gap: 3vw;
-    min-width: 28vw;
-    padding-top: 3vw;
-    border-radius: 4vw;
-  }
-  .memory-img {
-    width: 18vw;
-    height: 18vw;
-    border-radius: 50%;
-  }
-  .memory-label {
-    font-size: 0.95rem;
-  }
-  .footer-space {
-    height: 4vw;
-  }
-} 
